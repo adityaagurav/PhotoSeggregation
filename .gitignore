@@ -1,0 +1,99 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Virtual environments
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------------------------------------------------------------------
+# Environment / secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# IDE / editor
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Jupyter
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------------------------------------------------------------------------
+# Runtime application data (keep folder structure, ignore contents)
+# ---------------------------------------------------------------------------
+data/uploads/*
+!data/uploads/.gitkeep
+data/faces/*
+!data/faces/.gitkeep
+data/output/*
+!data/output/.gitkeep
+data/temp/*
+!data/temp/.gitkeep
+
+# ---------------------------------------------------------------------------
+# ML datasets (personal face data must never be committed)
+# ---------------------------------------------------------------------------
+ml/datasets/raw/*
+!ml/datasets/raw/.gitkeep
+ml/datasets/processed/*
+!ml/datasets/processed/.gitkeep
+ml/datasets/test/*
+!ml/datasets/test/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Models: keep folders, ignore large model weights
+# ---------------------------------------------------------------------------
+ml/models/pretrained/*
+!ml/models/pretrained/.gitkeep
+ml/models/custom/*
+!ml/models/custom/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+*.ckpt
+*.safetensors
+*.bin
+*.zip
+
+# InsightFace model cache (normally ~/.insightface, outside the repo; this
+# covers the case where a root is set inside the project by mistake).
+.insightface/
+
+# ---------------------------------------------------------------------------
+# Generated embeddings
+# ---------------------------------------------------------------------------
+ml/embeddings/*
+!ml/embeddings/.gitkeep
+*.npy
+*.npz
+*.pkl

@@ -1,0 +1,35 @@
+# AI-Based Photo Segregation - Python dependencies
+#
+# Direct dependencies actually used by the project (pinned to the versions
+# verified on macOS arm64 / Python 3.13.3 during the ML-foundation experiment).
+# Transitive dependencies (onnx, scipy, Pillow, ...) are pulled in automatically.
+
+# Pretrained face detection + recognition (Buffalo_L model pack).
+# Provides FaceAnalysis; also brings onnx/onnxruntime/Pillow/scipy transitively.
+insightface==2.0
+
+# Image I/O and array handling.
+opencv-python==5.0.0.93
+numpy==2.5.3
+
+# ONNX Runtime inference backend. CPUExecutionProvider is used by default on
+# this Apple Silicon machine (no CUDA/NVIDIA packages).
+onnxruntime==1.30.0
+
+# ---------------------------------------------------------------------------
+# Web interface (Phase: UI -- landing page implemented)
+# ---------------------------------------------------------------------------
+streamlit==1.65.0
+
+# ---------------------------------------------------------------------------
+# Local API (Phase: upload -> pipeline integration)
+# ---------------------------------------------------------------------------
+# FastAPI + uvicorn serve the local /upload and /process endpoints that connect
+# the React frontend to the existing pipeline. Local-only; no deployment.
+fastapi==0.143.0
+uvicorn==0.54.0
+
+# ---------------------------------------------------------------------------
+# Planned / not yet added (intentionally commented until the stage needs them)
+# ---------------------------------------------------------------------------
+# pytest           # tests (Phase: testing)
